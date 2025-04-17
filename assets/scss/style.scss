@@ -1,0 +1,28 @@
+@import './normalize',
+        './global';
+
+body {
+    background: white;
+    color: black;
+    font-weight: 400;
+}
+
+button, input, textarea, li, div {
+    font-family: $font-montserrat;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.container {}
+
+// Header
+.header {}
+// Header end
+
+// Home
+.home {}
+// Home end
+
+// Footer
+.footer {}
+// Footer end
