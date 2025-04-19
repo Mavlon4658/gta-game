@@ -1,4 +1,17 @@
 // Fonts
+@font-face {
+    font-family: 'Tilda Sans';
+    src: url('../fonts/TildaSans-Bold.ttf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Tilda Sans';
+    src: url('../fonts/TildaSans-Black.ttf');
+    font-weight: 900;
+}
+
+$font-tilda-sans: 'Tilda Sans', sans-serif;
 // Fonts end
 
 // Colors
