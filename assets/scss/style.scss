@@ -448,6 +448,10 @@ main {
     position: relative;
     z-index: 1;
 
+    @include media(992) {
+        padding: 222px 0 280px;
+    }
+
     &-bg {
         &__1 {
             position: absolute;
@@ -457,6 +461,21 @@ main {
             transform: translateX(-50%);
             width: 1841px;
             min-width: 1841px;
+            
+            @include media(992) {
+                display: none;
+                width: 582px;
+                min-width: 582px;
+                top: 15px;
+            }
+
+            &.mb {
+                display: none;
+                
+                @include media(992) {
+                    display: block;
+                }
+            }
         }
 
         &__2 {
@@ -464,6 +483,10 @@ main {
             z-index: -1;
             left: 0;
             bottom: 0;
+
+            @include media(992) {
+                display: none;
+            }
         }
 
         &__3 {
@@ -471,14 +494,36 @@ main {
             z-index: -1;
             right: 0;
             bottom: 0;
+
+            @include media(992) {
+                display: none;
+            }
+        }
+
+        &__mb {
+            display: none;
+
+            @include media(992) {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                z-index: -1;
+            }
         }
     }
 
     &-form {
-        width: 615px;
+        max-width: 615px;
+        width: calc(100% - 46px);
         border: 2px solid white;
         border-radius: 25px;
         padding: 32px 35px 36px 34px;
+
+        @include media(992) {
+            padding: 28px 31px 27px 31px;
+        }
     }
 
     &-head {
@@ -487,8 +532,16 @@ main {
         justify-content: space-between;
         padding: 0 28px 0 42px;
 
+        @include media(992) {
+            padding: 0 0 0 4px;
+        }
+
         p {
             font-size: 40px;
+
+            @include media(992) {
+                font-size: 30px;
+            }
         }
 
         a {
@@ -498,10 +551,28 @@ main {
             font-size: 40px;
             line-height: 48px;
             padding: 20px 34px 19px 35px;
+
+            @include media(992) {
+                height: 61px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0 23px;
+                font-size: 30px;
+            }
         }
 
         &.login-head {
             padding: 0 62px 0 0;
+
+            @include media(992) {
+                padding: 0 23px 0 0;
+
+                a {
+                    padding: 0 16px 0 13px;
+                }
+            }
         }
     }
 
@@ -511,6 +582,11 @@ main {
             flex-direction: column;
             gap: 32px;
             margin: 76px 0;
+
+            @include media(992) {
+                margin: 29px 0 45px;
+                gap: 17px;
+            }
         }
 
         &-control {
@@ -525,6 +601,11 @@ main {
                 z-index: -1;
                 opacity: 0.5;
                 font-size: 40px;
+
+                @include media(992) {
+                    font-size: 30px;
+                    left: 13px;
+                }
             }
 
             input {
@@ -536,6 +617,11 @@ main {
                 line-height: 42px;
                 text-align: right;
                 color: white;
+
+                @include media(992) {
+                    padding: 14px 13px;
+                    font-size: 30px;
+                }
 
                 &::placeholder {
                     color: white;
@@ -553,6 +639,13 @@ main {
         padding: 19px 19px 20px;
         font-size: 40px;
         line-height: 48px;
+
+        @include media(992) {
+            font-size: 30px;
+            line-height: 36px;
+            padding: 10px 0 15px;
+            border-radius: 20px;
+        }
     }
 }
 // auth end
