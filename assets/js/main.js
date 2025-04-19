@@ -15,3 +15,17 @@ if (phoneInp.length) {
         })
     });
 }
+
+const aboutSwp = new Swiper('.about-swp .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    speed: 7000,
+    loop: true,
+    autoplay: {
+        delay: 0,
+        reverseDirection: false,
+        disableOnInteraction: false,
+    },
+    watchSlidesProgress: false,
+    allowTouchMove: false,
+})
