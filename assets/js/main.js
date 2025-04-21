@@ -18,7 +18,7 @@ if (phoneInp.length) {
 
 const aboutSwp = new Swiper('.about-swp .swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 40,
+    spaceBetween: 10,
     speed: 7000,
     loop: true,
     autoplay: {
@@ -28,4 +28,9 @@ const aboutSwp = new Swiper('.about-swp .swiper', {
     },
     watchSlidesProgress: false,
     allowTouchMove: false,
+    breakpoints: {
+        992: {
+            spaceBetween: 40,
+        }
+    }
 })
